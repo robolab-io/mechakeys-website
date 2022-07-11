@@ -4,15 +4,12 @@
 </script>
 
 <div class="ctaContent">
-    <div class="heading">MechaKeys™ is a customization tool for desktop.</div>
+    <div class="heading">MechaKeys is a desktop customization tool.</div>
     <div class="description">
-        The most popular keyboard and mouse simulator.
-        MechaKeys is the integrated typing environment
-        with blazingly fast performance, an awesome UI,
-        and open development.
+        The most popular keyboard and mouse simulator. MechaKeys is the integrated typing environment built for blazing-fast performance, a modern interface, and open development.
     </div>
     <Downloads/>
-    
+
     <Breathe/>
 </div>
 
@@ -38,5 +35,8 @@
     /* margin: auto 4rem auto 4rem; */
     margin: auto 4rem auto 4rem;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 </style>

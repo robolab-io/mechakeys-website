@@ -1,3 +1,7 @@
+<script>
+
+</script>
+
 <div class="downloadButtonWrapper">
     <a href="" class="downloadButton">Download for Windows</a>
     <a href="" class="downloadLink">Other platforms</a>

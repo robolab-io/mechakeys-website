@@ -27,27 +27,6 @@
 </div>
 
 <style>
-.app-position {
-    position: relative;
-    height: 100%;
-    width: 100%;
-}
-
-.app-location {
-    position: relative;
-    height: 100%;
-    width: 100%;
-}
-
-.app-background {
-    background: #1F1E23;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-
 .logo {
     width: 2.5rem;
     height: 2.5rem;
@@ -143,7 +122,6 @@ a {
 
     .links {
         justify-content: flex-end;
-        padding-right: 2rem;
     }
 }
 </style>
