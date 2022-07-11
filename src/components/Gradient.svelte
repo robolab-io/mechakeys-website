@@ -2,16 +2,17 @@
     import { onMount } from 'svelte'
 
     onMount(() => {
-        const projectsParent = document.querySelector(".hero");
-        const projectsCard = document.querySelectorAll(".heroImage");
+        const heroParent = document.querySelector(".hero");
+        const heroChild = document.querySelectorAll(".spotlight");
 
-        projectsParent.addEventListener("pointermove", (ev) => {
-            projectsCard.forEach((project) => {
-                const rect = project.getBoundingClientRect();
+        heroParent.addEventListener("pointermove", (ev) => {
+            heroChild.forEach((content) => {
+                const rect = content.getBoundingClientRect();
 
-                project.style.setProperty("--x", ev.clientX - rect.left);
-                project.style.setProperty("--y", ev.clientY - rect.top);
-
+                content.style.setProperty("--x", ev.clientX - rect.left);
+                content.style.setProperty("--y", ev.clientY - rect.top);
+                content.style.setProperty("--degX", ev.clientX * 0.02);
+                content.style.setProperty("--degY", ev.clientY * 0.02);
             });
         });
     })
@@ -22,6 +23,7 @@
             <div class="side right"></div>
             <div class="side left"></div>
             <div class="heroImage" style="">
+                <div class="spotlight"></div>
                 <video alt="The MechaKeys application running on Windows" class="appphoto" src="../images/appvideo.mp4" autoplay="true" muted="" loop="true" sstyle="filter: hue-rotate(0deg) !important; animation: none !important;"></video>
             </div>
         </div>
@@ -32,27 +34,21 @@
 .appphoto {
     border-radius: 1rem;
     opacity: 0.95;
+    transition: 600ms ease;
+    width: 100%;
 }
 .side.left:hover ~ .heroImage .appphoto {
     transition: 600ms ease;
-    transform: matrix3d(1, 0, 0.01, -0.00002, 0, 1, 0, 0, -0.2, 0, 0.1, 0, 1, 1, 10, 1.05);
-    box-shadow: 0 0 8rem #00000080;
+    transform: matrix3d(1, 0, -0.001, 0.00002, 0, 1, 0, 0, -0.2, 0, 0.1, 0, 1, 1, 10, 1);
+    box-shadow: 0 0 2rem #000000e0;
     opacity: 1;
 }
 
 .side.right:hover ~ .heroImage .appphoto {
     transition: 600ms ease;
-    transform: matrix3d(1, 0, -0.01, 0.00002, 0, 1, 0, 0, -0.2, 0, 0.1, 0, 1, 1, 10, 1.05);
-    box-shadow: 0 0 8rem #00000080;
+    transform: matrix3d(1, 0, 0.001, -0.00002, 0, 1, 0, 0, -0.2, 0, 0.1, 0, 1, 1, 10, 1);
+    box-shadow: 0 0 2em #000000e0;
     opacity: 1;
-}
-
-.appphoto {
-    transition: 600ms ease;
-}
-
-.appphoto {
-    width: 100%;
 }
 
 .side {
@@ -115,12 +111,6 @@
     border-radius: 0.75rem;
 
     perspective: 200px;
-    transition: all 0.2s ease;
-}
-
-.heroImage:hover {
-    /* transform: scale(1.05); */
-    transition: 600ms ease;
 }
 
 @keyframes blur-in {
@@ -178,5 +168,35 @@
         border-radius: 0 !important;
         height: 500px !important;
     }
+}
+.spotlight {
+    z-index: 9997;
+}
+.spotlight::before, .spotlight::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    inset: 0px;
+    border-radius: inherit;
+    background: radial-gradient(750px circle at var(--x) var(--y),rgba(255,255,255,1),transparent 40%);
+    z-index: 9998;
+}
+
+.spotlight::before {
+    z-index: 1;
+}
+
+.spotlight::after {
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 350ms ease 0s;
+}
+
+.spotlight:hover::after {
+    opacity: 1;
 }
 </style>
