@@ -91,7 +91,7 @@
     
     border-radius: 0px 0px 0px 50px;
     width: 100%;
-    min-height: calc(100% - 15%);
+    min-height: clamp(calc(100% - 45%), calc(100% - 25%), calc(100% - 10%));
 }
 
 .gradientBackground::before {
