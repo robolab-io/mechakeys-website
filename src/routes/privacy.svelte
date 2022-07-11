@@ -15,7 +15,10 @@
         When you create an account and access our services using that account, you provide Robolab with an email and username for identification purposes only.
     </div>
     <div class="description">
-        When you perform actions on our services, which includes, but is not limited to, purchasing digital items on our services, checking your account's achivements, or viewing a leaderboard, Robolab will automatically receive information such as your IP address, and may store attributes and related metadata about that request, such as whether it was successful and how it was accessed. 
+        When you perform actions on our services, which includes, but is not limited to, purchasing digital items on our services, checking your account's achievements, or viewing a leaderboard, Robolab will automatically receive information such as your IP address, and may store attributes and related metadata about that request, such as whether it was successful and how it was accessed. 
+    </div>
+    <div class="description">
+        In the event where the Terms of Service is breached, Robolab may store your IP address for security and authenticity purposes only.    
     </div>
     <div class="description">
         Robolab does not use cookies, third-party analytics, advertising systems, or similar tracking technologies on our websites and services.

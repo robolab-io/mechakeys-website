@@ -24,7 +24,7 @@
             <div class="side left"></div>
             <div class="heroImage" style="">
                 <div class="spotlight"></div>
-                <video alt="The MechaKeys application running on Windows" class="appphoto" src="../images/appvideo.mp4" autoplay="true" muted="" loop="true" sstyle="filter: hue-rotate(0deg) !important; animation: none !important;"></video>
+                <video alt="The MechaKeys application running on Windows" class="appphoto" src="../images/appvideo.mp4" autoplay="true" muted="true" loop="true" style="filter: hue-rotate(0deg) !important; animation: none !important;"></video>
             </div>
         </div>
     </div>
