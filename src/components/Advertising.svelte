@@ -35,8 +35,8 @@
 <div class="section">
     <div class="endingSectionContent">
         <div class="endingSectionText">
-            <div class="sectionTitle">Download the best keyboard simulator.</div>
-            <div class="sectionDescription">MechaKeys is free, forever, for personal use.</div>
+            <div class="sectionTitle">Download MechaKeys</div>
+            <div class="sectionDescription">Free to download, free to use, available for every device. Join over 600,000 other people!</div>
         </div>
         <div class="endingDownloads">
             <Downloads/>
