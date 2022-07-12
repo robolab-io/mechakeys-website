@@ -66,7 +66,7 @@
   left: 0;
 }
 .hero {
-    height: 100vh;
+    height: 700px;
     display: flex;
     flex: 1;
 }
@@ -165,7 +165,7 @@
 
 @media only screen and (max-width: 800px) {
     .gradient, .gradientBackground {
-        border-radius: 0 !important;
+        border-radius: 2rem 2rem 0 0 !important;
         height: 500px !important;
     }
 }
