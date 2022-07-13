@@ -4,9 +4,9 @@
 </script>
 
 <div class="ctaContent">
-    <div class="heading">MechaKeys is a desktop customization tool.</div>
+    <div class="heading">The desktop sound simulator</div>
     <div class="description">
-        The most popular keyboard and mouse simulator. MechaKeys is the integrated typing environment built for blazing-fast performance, a modern interface, and open development.
+        MechaKeys is the most popular keyboard and mouse simulator for desktop. The easiest solution to add immersion to your typing, gaming, streaming, and more.
     </div>
     <Downloads/>
 

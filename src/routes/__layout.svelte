@@ -17,7 +17,7 @@
                 </a>
     
                 <div class="links">
-                    <a href="https://discord.robolab.io" class="navbarLink" target="_blank" rel="noopener noreferrer">Discord</a><a href="/terms" class="navbarLink">Terms</a><a href="/privacy" class="navbarLink navbarLinkActive">Privacy</a>
+                    <a href="https://discord.robolab.io" class="navbarLink _1" target="_blank" rel="noopener noreferrer">Discord</a><a href="/terms" class="navbarLink _2">Terms</a><a href="/privacy" class="navbarLink navbarLinkActive _3">Privacy</a>
                 </div>
             </div>
             <Breathe/>
@@ -39,11 +39,31 @@
     align-self: center;
 }
 .navbarLink {
-    font-size: 18px;
+    font-size: 14px;
     font-family: 'MechaKeys Black';
     color: #F0F3F8;
     transition: 0.2s;
     padding: 1rem;
+
+    animation-name: fade-in-up-better-links;
+    animation-duration: 1200ms;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: backwards;
+    animation-play-state: running;
+}
+
+.navbarLink._1 {
+    animation-delay: 50ms;
+}
+
+.navbarLink._2 {
+    animation-delay: 100ms;
+}
+
+.navbarLink._3 {
+    animation-delay: 150ms;
 }
 
 .navbarLink:hover {
@@ -64,7 +84,6 @@
     margin-bottom: 2rem;
     justify-content: space-between;
     width: 100%;
-    background-color: #0e0c11;
     z-index: 9998;
 }
 
@@ -109,7 +128,7 @@ a {
     flex-direction: row;
 }
 
-@keyframes fade-in-up-better {
+@keyframes fade-in-up-better-links {
  from {
   opacity:0;
   -webkit-transform:translateY(20px);

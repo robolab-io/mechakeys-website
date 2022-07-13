@@ -3,6 +3,7 @@
 </script>
 
 <div class="privacyContent">
+    <div class="gobackhome"><a href="/">← Go back home</a></div>
     <div class="heading">We do not sell your personal information.</div>
 
     <div class="description">
@@ -47,6 +48,11 @@
     a:hover {
         color: #b1caf5;
         transition: 0.2s;
+    }
+    
+    .gobackhome {
+        font-family: 'MechaKeys Standard';
+        margin-bottom: 2rem;
     }
 
     .heading {

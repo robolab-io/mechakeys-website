@@ -3,6 +3,7 @@
 </script>
 
 <div class="tosContent">
+    <div class="gobackhome"><a href="/">← Go back home</a></div>
     <div class="heading">Terms of Service</div>
     <div class="description">
         Please read our <a href="./new-privacy.html">Privacy Policy</a>.
@@ -61,6 +62,10 @@
         transition: 0.2s;
     }
 
+    .gobackhome {
+        font-family: 'MechaKeys Standard';
+        margin-bottom: 2rem;
+    }
     .heading {
         font-size: clamp(28px,3vw,46px);
         font-family: 'MechaKeys Black';
