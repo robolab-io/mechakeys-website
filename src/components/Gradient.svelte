@@ -39,14 +39,14 @@
 }
 .side.left:hover ~ .heroImage .appphoto {
     transition: 600ms ease;
-    transform: matrix3d(1, 0, -0.001, 0.00002, 0, 1, 0, 0, -0.2, 0, 0.1, 0, 1, 1, 10, 1);
+    transform: matrix3d(1, 0, -0.001, 0.00002, 0, 1, 0, 0, -0.2, 0, 0.1, 0, 1, 1, 10, 1) translateX(-4px); 
     box-shadow: 0 0 2rem #000000e0;
     opacity: 1;
 }
 
 .side.right:hover ~ .heroImage .appphoto {
     transition: 600ms ease;
-    transform: matrix3d(1, 0, 0.001, -0.00002, 0, 1, 0, 0, -0.2, 0, 0.1, 0, 1, 1, 10, 1);
+    transform: matrix3d(1, 0, 0.001, -0.00002, 0, 1, 0, 0, -0.2, 0, 0.1, 0, 1, 1, 10, 1)  translateX(4px);
     box-shadow: 0 0 2em #000000e0;
     opacity: 1;
 }
