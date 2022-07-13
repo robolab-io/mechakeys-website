@@ -2,50 +2,53 @@
     import Breathe from '../components/Breathe.svelte'
     import Downloads from '../components/Downloads.svelte'
 </script>
-<div class="section sectiondark">
-    <div class="sectionContent">
-        <div class="sectionImage"><img class="image" src="../images/rocket-hero.png" alt=""/></div>
-        <div class="gradients" style="--color-a: #BA2DB7; --color-b: #CF3C7E; --color-c: #E94F35;"></div>
-        <div class="sectionText">
-            <div class="sectionTitle">Maximum performance</div>
-            <div class="sectionDescription">MechaKeys is built for native speeds on any device. Experience the lowest latency possible from a sound simulator. An optimized frontend and a custom-built input detector create a realistic typing experience.</div>
+
+<div class="sections">
+    <div class="section sectiondark">
+        <div class="sectionContent">
+            <div class="sectionImage"><img class="image" src="../images/rocket-hero.png" alt=""/></div>
+            <div class="gradients" style="--color-a: #BA2DB7; --color-b: #CF3C7E; --color-c: #E94F35;"></div>
+            <div class="sectionText">
+                <div class="sectionTitle">Maximum performance</div>
+                <div class="sectionDescription">MechaKeys is built for native speeds on any device. Experience the lowest latency possible from a sound simulator. An optimized frontend and a custom-built input detector create a realistic typing experience.</div>
+            </div>
         </div>
     </div>
-</div>
-<div class="section">
-    <div class="sectionContent">
-        <div class="sectionText">
-            <div class="sectionTitle">Truly customizable</div>
-            <div class="sectionDescription">A huge variety of different keyboard switches from your favorite manufacturers are already in MechaKeys. Everything is an option - customize MechaKeys in a way that works for you.</div>
-        </div>
-        <div class="sectionImage"><img class="image" src="../images/switch-hero.png" alt=""/></div>
-        <div class="gradients gradientsRight" style="--color-a: #7a2dba; --color-b: #523ccf; --color-c: #35cee9;"></div>
-    </div>
-</div>
-<div class="section sectiondark">
-    <div class="sectionContent">
-        <div class="sectionImage"><img class="image" src="../images/community-hero.png" alt=""/></div>
-        <div class="gradients" style="--color-a: #BA2DB7; --color-b: #CF3C7E; --color-c: #E94F35;"></div>
-        <div class="sectionText">
-            <div class="sectionTitle">Community powered</div>
-            <div class="sectionDescription">Our Discord community provides direct access to in-app rewards and contact with the developers to share feedback and requests. Soon, a community store will be available to share your creations!</div>
+    <div class="section">
+        <div class="sectionContent">
+            <div class="sectionText">
+                <div class="sectionTitle">Truly customizable</div>
+                <div class="sectionDescription">A huge variety of different keyboard switches from your favorite manufacturers are already in MechaKeys. Everything is an option - customize MechaKeys in a way that works for you.</div>
+            </div>
+            <div class="sectionImage"><img class="image" src="../images/switch-hero.png" alt=""/></div>
+            <div class="gradients gradientsRight" style="--color-a: #7a2dba; --color-b: #523ccf; --color-c: #35cee9;"></div>
         </div>
     </div>
-</div>
-<div class="section">
-    <div class="endingSectionContent">
-        <div class="endingSectionText">
-            <div class="sectionTitle">Download MechaKeys</div>
-            <div class="sectionDescription">Free to download, free to use, available for every device. Join over 600,000 other people!</div>
-        </div>
-        <div class="endingDownloads">
-            <Downloads/>
-            <Breathe/>
+    <div class="section sectiondark">
+        <div class="sectionContent">
+            <div class="sectionImage"><img class="image" src="../images/community-hero.png" alt=""/></div>
+            <div class="gradients" style="--color-a: #BA2DB7; --color-b: #CF3C7E; --color-c: #E94F35;"></div>
+            <div class="sectionText">
+                <div class="sectionTitle">Community powered</div>
+                <div class="sectionDescription">Our Discord community provides direct access to in-app rewards and contact with the developers to share feedback and requests. Soon, a community store will be available to share your creations!</div>
+            </div>
         </div>
     </div>
-</div>
-<div class="section">
-    <div class="copyright">Copyright (c) 2022 Robolab, Fero</div>
+    <div class="section">
+        <div class="endingSectionContent">
+            <div class="endingSectionText">
+                <div class="sectionTitle">Download MechaKeys</div>
+                <div class="sectionDescription">Free to download, free to use, available for every device. Join over 600,000 other people!</div>
+            </div>
+            <div class="endingDownloads">
+                <Downloads/>
+                <Breathe/>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="copyright">Copyright (c) 2022 Robolab, Fero</div>
+    </div>
 </div>
 
 <style>
