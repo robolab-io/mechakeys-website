@@ -33,7 +33,7 @@
 <style>
 .appphoto {
     border-radius: 1rem;
-    opacity: 0.95;
+    opacity: 0.89;
     transition: 600ms ease;
     width: 100%;
 }
@@ -110,7 +110,7 @@
     width: 750px;
     border-radius: 0.75rem;
 
-    perspective: 200px;
+    perspective: 1000px;
 }
 
 @keyframes blur-in {
