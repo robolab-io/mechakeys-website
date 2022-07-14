@@ -76,5 +76,6 @@
         /* margin: auto 4rem auto 4rem; */
         margin: auto 4rem auto 4rem;
         height: 100%;
+        margin-top: 6rem;
     }
     </style>

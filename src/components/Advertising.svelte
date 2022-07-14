@@ -52,6 +52,9 @@
 </div>
 
 <style>
+    * {
+        --base-delay: 1500ms
+    }
 .copyright {
     color: #8C939E;
     font-size: 12px;
@@ -76,7 +79,7 @@
     animation-direction: normal;
     animation-fill-mode: backwards;
     animation-play-state: running;
-    animation-delay: 350ms;
+    animation-delay: calc(var(--base-delay) + 350ms);
 }
 .sectionTitle {
     font-size: clamp(20px,3vw,40px);
@@ -88,7 +91,7 @@
     animation-direction: normal;
     animation-fill-mode: backwards;
     animation-play-state: running;
-    animation-delay: 300ms;
+    animation-delay: calc(var(--base-delay)  + 300ms);
 }
 .image {
     width: 100%;
@@ -104,6 +107,7 @@
     animation-direction: normal;
     animation-fill-mode: backwards;
     animation-play-state: running;
+    animation-delay: calc(var(--base-delay) + 0ms);
 }
 
 .sectionText {

@@ -74,7 +74,7 @@
     inset: 0;
     z-index: -1;
     opacity: .8;
-    margin: -1px;
+    margin: -3px;
     border-radius: inherit;
     transition: opacity .2s;
     background: linear-gradient(135deg,#ff2136,#9b4dff 50%,#0294fe);
@@ -82,5 +82,7 @@
 
 .downloadButton:hover::before {
     background: linear-gradient(135deg,#ff21aa,#4db8ff 50%,#02fec7);
+    transition: opacity .2s;
+    opacity: 1;
 }
 </style>

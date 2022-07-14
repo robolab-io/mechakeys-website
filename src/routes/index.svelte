@@ -20,6 +20,7 @@
     line-height: 135%;
     color: #F0F3F8;
     margin-bottom: 2rem;
+    z-index: 1;
 }
 
 .description {
@@ -28,6 +29,7 @@
     line-height: 135%;
     color: #8C939E;
     margin-bottom: 2rem;
+    z-index: 1;
 }
 
 .ctaContent {
@@ -38,5 +40,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index: 1;
+    height: 700px;
 }
 </style>

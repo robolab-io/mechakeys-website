@@ -86,6 +86,7 @@
         max-width: 550px;
         /* margin: auto 4rem auto 4rem; */
         margin: auto 4rem auto 4rem;
+        margin-top: 6rem;
         height: 100%;
     }
     </style>

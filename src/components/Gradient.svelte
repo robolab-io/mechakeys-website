@@ -69,6 +69,7 @@
     height: 700px;
     display: flex;
     flex: 1;
+    animation: 1900ms ease-in 0s 1 normal backwards running blur-in;
 }
 
 .gradient {
@@ -76,7 +77,9 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    border-radius: 0px 0px 00px 50px
+    border-radius: 50px 00px 00px 50px;
+    margin: 4rem 0rem 2rem 2rem;
+    
 }
 
 .gradientBackground {
@@ -85,7 +88,7 @@
     align-items: center;
     justify-content: center;
     
-    border-radius: 0px 0px 0px 50px;
+    border-radius: 50px 00px 00px 50px;
     width: 100%;
     min-height: clamp(calc(100% - 45%), calc(100% - 25%), calc(100% - 10%));
 }
@@ -101,7 +104,6 @@
 }
 
 .heroImage {
-    animation: 500ms linear 0s 1 normal backwards running blur-in;
     animation-delay: 300ms;
     display: flex;
     flex-shrink: 1;
@@ -162,11 +164,29 @@
         display: flex;
     }
 } */
+@media only screen and (max-width: 1600px) {
+
+    .heroImage {
+        position: absolute;
+        left: 0;
+    }
+}
 
 @media only screen and (max-width: 800px) {
     .gradient, .gradientBackground {
-        border-radius: 2rem 2rem 0 0 !important;
-        height: 500px !important;
+        border-radius: 2rem 2rem 0rem 0rem !important;
+        height: 450px !important;
+        margin: 0 !important;
+    }
+
+    .heroImage {
+        margin: 1rem !important;
+        position: initial;
+    }
+
+    .hero {
+        height: 450px !important;
+        margin: 0 !important;
     }
 }
 .spotlight {
