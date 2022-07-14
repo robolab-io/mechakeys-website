@@ -4,13 +4,13 @@
 
 <div class="privacyContent">
     <div class="gobackhome"><a href="/">← Go back home</a></div>
-    <div class="heading">We do not sell your personal information.</div>
+    <div class="heading">Privacy Policy</div>
 
     <div class="description">
-        Please read our <a href="./new-terms.html">Terms of Service</a>.
+        Please read our <a href="/terms">Terms of Service</a>.
     </div>
     <div class="description">
-        That's our policy in a nutshell. No information provided or automatically collected will be sold or transferred outside of Robolab. Your information is only used for the purposes of our services and their security. We only store information for as long as you use our services.
+        We do not sell your personal information. That's our policy in one sentence. No information provided or automatically collected will be sold or transferred outside of Robolab. Your information is only used for the purposes of our services and their security. We only store information for as long as you use our services.
     </div>
     <div class="description">
         When you create an account and access our services using that account, you provide Robolab with an email and username for identification purposes only.

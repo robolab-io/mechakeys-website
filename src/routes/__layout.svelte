@@ -36,7 +36,7 @@
     bottom: 0;
     width: 100%;
     height: 100vh;
-    opacity: .1;
+    opacity: .2;
     pointer-events: none;
     z-index: 0;
     filter: blur(0rem);
@@ -46,20 +46,23 @@
 @keyframes glow-in {
     0% {
         opacity:0;
-        filter: blur(10rem);
+        filter: blur(20rem);
     }
     70% {
         opacity:0.7;
         filter: blur(6rem);
     }
     100% {
-        opacity:0.1;
+        opacity:0.2;
         filter: blur(0rem);
     }
 }
 .logo {
     width: 2.25rem;
     height: 2.25rem;
+
+    display: flex;
+    align-self: center;
 
     animation-name: fade-in-better-logo;
     animation-duration: 1200ms;

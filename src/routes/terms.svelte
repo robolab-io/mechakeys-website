@@ -6,7 +6,7 @@
     <div class="gobackhome"><a href="/">← Go back home</a></div>
     <div class="heading">Terms of Service</div>
     <div class="description">
-        Please read our <a href="./new-privacy.html">Privacy Policy</a>.
+        Please read our <a href="/privacy">Privacy Policy</a>.
     </div>
     <div class="description">
         You must be a minimum of 13 years of age to use our services.

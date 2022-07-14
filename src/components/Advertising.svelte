@@ -47,7 +47,8 @@
         </div>
     </div>
     <div class="section">
-        <div class="copyright">Copyright (c) 2022 Robolab, Fero</div>
+        <div class="copyright">© 2022 Robolab LLC. All rights reserved.</div>
+        <img style="position: absolute; top: 0; left: 0; z-index: -1; width: 100%; opacity: .2; pointer-events: none;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGOSURBVHgBvVFLbhNBEH1V3T2emdg4AfxJFO9AoMkKxAFYI3Ens+YEnIMDsEKsWIDIbIgQigSWg+wIz3i+1d00YkMukFq9V6pXVa+K3rx8mw6UOo5EZd65pyB+WCTR8Nf9dH85H3/7OR1/Xs2HX7Ykq++fDkuNODYd9Ahwp6qRx8rSI80YcYOGOgzZ+XogcoWJuc4yVHprYo6I4oh5zK27y8RHda9HVZt0Ukd7bnnetxhzqaJqAta0SFyxIdhCgZRRYrXuxKimZG2v44SMSZXSJhoiDAX0x9msm63LPUlcoQ+1jfbOKvY9MwnMoGd15EPnBO59D6fx4dTWd1Y77v0Vi157RwsvKqjg2VEdwTcHrm8aBEcvguDsDHJ+botY4gtj6R6YOjaYeGIVDrEN7Oug4PVBLu3yNRwBnrIsN8+OF6Owwwm1/kQRDsWSUoYqR3bVS3L5YJNuljl1GiCf5+im03e/n1w8r3aL3Y/wk8hJzZ2NJZn6tlynNfJXEjyDcCP8X07L/zIB+3+IPG4l/gCInrnOZomQAAAAAABJRU5ErkJggg==" alt="">
     </div>
 </div>
 
@@ -59,7 +60,7 @@
     color: #8C939E;
     font-size: 12px;
     font-family: 'MechaKeys Standard';
-    padding: 1rem;
+    padding: 2rem;
 }
 .endingDownloads {
     margin-top: 2rem;
