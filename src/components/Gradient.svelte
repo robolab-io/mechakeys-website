@@ -2,69 +2,78 @@
     import { onMount } from 'svelte'
 
     onMount(() => {
-        const heroParent = document.querySelector(".hero");
-        const heroChild = document.querySelectorAll(".spotlight");
+        // Thanks to Ryan Finni
+        // https://letsbuildui.dev/articles/a-3d-hover-effect-using-css-transforms
 
-        heroParent.addEventListener("pointermove", (ev) => {
-            heroChild.forEach((content) => {
-                const rect = content.getBoundingClientRect();
+        const card = document.querySelector(".heroImage");
+        const photo = document.querySelector(".appphoto");
 
-                content.style.setProperty("--x", ev.clientX - rect.left);
-                content.style.setProperty("--y", ev.clientY - rect.top);
-                content.style.setProperty("--degX", ev.clientX * 0.02);
-                content.style.setProperty("--degY", ev.clientY * 0.02);
-            });
-        });
+        const bg = document.querySelector(".gradientBackground");
+        const THRESHOLD = 2;
+
+        function handleHover(e) {
+            const { clientX, clientY, currentTarget } = e;
+            const { clientWidth, clientHeight, offsetLeft, offsetTop } = currentTarget;
+            const horizontal = (clientX - offsetLeft) / clientWidth;
+            const vertical = (clientY - offsetTop) / clientHeight;
+            const rotateX = (THRESHOLD / 2 - horizontal * THRESHOLD).toFixed(2);
+            const rotateY = (vertical * THRESHOLD - THRESHOLD / 2).toFixed(2);
+            const reflectPower = vertical > 0.5 ? vertical - 0.5 : 0;
+            const reflectLeft = horizontal * 100;
+            const reflectTop = vertical * 100;
+            
+            card.style.transform =
+                `perspective(${clientWidth}px) rotateX(${rotateY}deg) rotateY(${rotateX}deg) scale3d(1, 1, 1)`;
+            card.style.setProperty("--x", clientX)
+            card.style.setProperty("--y", clientY)
+            card.style.setProperty("--realWidth", clientWidth)
+            card.style.setProperty("--h", horizontal)
+            card.style.setProperty("--v", vertical)
+            card.style.setProperty("--reflect-power", reflectPower);
+            card.style.setProperty("--reflect-left", `${reflectLeft}%`);
+            card.style.setProperty("--reflect-top", `${reflectTop}%`);
+
+            photo.style.setProperty("--x", clientX)
+            photo.style.setProperty("--y", clientY)
+            photo.style.setProperty("--realWidth", clientWidth)
+            photo.style.setProperty("--h", horizontal)
+            photo.style.setProperty("--v", vertical)
+            photo.style.setProperty("--reflect-power", reflectPower);
+            photo.style.setProperty("--reflect-left", `${reflectLeft}%`);
+            photo.style.setProperty("--reflect-top", `${reflectTop}%`);
+
+            bg.style.setProperty("--total-power", reflectPower + 5);
+            
+        }
+
+        function resetStyles(e) {
+            card.style.transform =
+                `perspective(${e.currentTarget.clientWidth}px) rotateX(0deg) rotateY(0deg)`;
+            
+            card.style.setProperty("--reflect-power", 0);
+        }
+
+        card.addEventListener("mousemove", handleHover);
+        card.addEventListener("mouseleave", resetStyles);
     })
 </script>
 <div class="hero">
     <div class="gradient">
         <div class="gradientBackground">
-            <div class="side right"></div>
-            <div class="side left"></div>
             <div class="heroImage" style="">
-                <div class="spotlight"></div>
                 <video alt="The MechaKeys application running on Windows" class="appphoto" src="../images/appvideo.mp4" autoplay="true" muted="true" loop="true" style="filter: hue-rotate(0deg) !important; animation: none !important;"></video>
             </div>
         </div>
     </div>
 </div>
 
-<style>
+<style lang="scss">
 .appphoto {
+    margin: 1rem;
     border-radius: 1rem;
-    opacity: 0.89;
-    transition: 600ms ease;
     width: 100%;
 }
-.side.left:hover ~ .heroImage .appphoto {
-    transition: 600ms ease;
-    transform: matrix3d(1, 0, -0.001, 0.00002, 0, 1, 0, 0, -0.2, 0, 0.1, 0, 1, 1, 10, 1) translateX(-4px); 
-    box-shadow: 0 0 2rem #000000e0;
-    opacity: 1;
-}
 
-.side.right:hover ~ .heroImage .appphoto {
-    transition: 600ms ease;
-    transform: matrix3d(1, 0, 0.001, -0.00002, 0, 1, 0, 0, -0.2, 0, 0.1, 0, 1, 1, 10, 1)  translateX(4px);
-    box-shadow: 0 0 2em #000000e0;
-    opacity: 1;
-}
-
-.side {
-    position: absolute;
-    width: 50%;
-    top: 0;
-    bottom: 0;
-    z-index: 10;
-}
-.side.right {
-  right: 0
-}
-
-.side.left {
-  left: 0;
-}
 .hero {
     height: 700px;
     display: flex;
@@ -104,16 +113,51 @@
 }
 
 .heroImage {
-    animation-delay: 300ms;
-    display: flex;
-    flex-shrink: 1;
-    transition: 600ms ease;
-    margin: 2rem;
     width: 750px;
     border-radius: 0.75rem;
 
-    perspective: 1000px;
+    position: relative;
+    transition: 600ms;
+    transform-style: preserve-3d;
+    will-change: transform;
+
+    opacity: 0.89;
 }
+
+.heroImage:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+}
+			
+.heroImage:after {
+    content: "";
+        background:  radial-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+        position: absolute;
+        padding-top: 220%;
+        width: 600%;
+        z-index: 2;
+        top: var(--reflect-top, 0);
+        left: var(--reflect-left, 0);
+        opacity: var(--reflect-power, 0);
+        transition: opacity .3s ease;
+}
+
+.heroImage:hover{
+    transition-duration: .1s;
+    opacity: 1;
+}
+
+.heroImage:hover > .heroImage:after {
+    transition-duration: .1s;
+}
+
 
 @keyframes blur-in {
     0% {
@@ -188,35 +232,5 @@
         height: 450px !important;
         margin: 0 !important;
     }
-}
-.spotlight {
-    z-index: 9997;
-}
-.spotlight::before, .spotlight::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    inset: 0px;
-    border-radius: inherit;
-    background: radial-gradient(750px circle at var(--x) var(--y),rgba(255,255,255,1),transparent 40%);
-    z-index: 9998;
-}
-
-.spotlight::before {
-    z-index: 1;
-}
-
-.spotlight::after {
-    opacity: 0;
-    z-index: 2;
-    transition: opacity 350ms ease 0s;
-}
-
-.spotlight:hover::after {
-    opacity: 1;
 }
 </style>
