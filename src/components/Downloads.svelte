@@ -3,8 +3,8 @@
 </script>
 
 <div class="downloadButtonWrapper">
-    <a href="" class="downloadButton">Download for Windows</a>
-    <a href="" class="downloadLink">Other platforms</a>
+    <a href="https://github.com/robolab-io/mechakeys-distro/releases/latest/download/MechaKeys-installer-win64.exe" class="downloadButton">Download for Windows</a>
+    <a href="https://github.com/robolab-io/mechakeys-distro/releases" class="downloadLink">Other platforms</a>
 </div>
 
 <style>

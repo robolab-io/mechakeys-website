@@ -69,7 +69,6 @@
 
 <style lang="scss">
 .appphoto {
-    margin: 1rem;
     border-radius: 1rem;
     width: 100%;
 }
@@ -122,6 +121,7 @@
     will-change: transform;
 
     opacity: 0.89;
+    margin: 1rem;
 }
 
 .heroImage:before {
